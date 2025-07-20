@@ -1,11 +1,6 @@
 @import './mixins';
 @import './base';
 
-@include font-face(Roboto, 'RobotoRegelar', 400);
 
-.container{
-    @include flex-all-between;
-
-    @include small-desctop;
-    
-}
+// components
+@import './components/header';
