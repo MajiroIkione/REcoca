@@ -6,7 +6,7 @@
         padding: 67px 0 121;
     }
     @include mobile {
-        min-height: calc(100dvh - 128px);
+        min-height: calc(100dvh - 109px);
     }
 
     &::before {
@@ -61,18 +61,19 @@
         @include flex-justify-between;
         align-items: flex-end;
         gap: 15px;
-        flex-wrap: wrap;
 
         @include mini-desktop {
             flex-direction: column;
             align-items: center;
             text-align: center;
             gap: 50px;
+                    flex-wrap: wrap;
         }
     }
-
     &__left {
-        max-width: 590px;
+        @include mini-desktop{
+            max-width: 617px;
+        } 
     }
 
     &__title {
@@ -104,6 +105,12 @@
 
     &__subtitle {
         margin-bottom: 69px;
+
+        & br{
+            @include mini-desktop{
+                display: none;
+            }
+        }
     }
 
     &__form {
@@ -233,7 +240,8 @@
         }
 
         &-body {
-            & th {
+            & td {
+                white-space: nowrap;
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 130%;
@@ -277,6 +285,7 @@
             }
 
             &-text {
+                white-space: nowrap;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 157%;
