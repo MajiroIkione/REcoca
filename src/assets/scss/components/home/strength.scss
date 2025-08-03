@@ -1,0 +1,139 @@
+.strength {
+    padding: 66px 0 8px;
+
+    @include mobile {
+        padding: 26px 0 70px
+    }
+
+    &__container {
+        border-bottom: 1px solid var(--neutral-color30);
+    }
+
+    &__list {
+        @include flex-align-center;
+
+
+        @include tablet {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            gap: 92px;
+        }
+
+        @include small-tablet {
+            gap: 62px;
+        }
+
+        @include mobile {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__item {
+
+        @include tablet {
+            justify-content: center;
+        }
+
+        @include mobile {
+            min-width: 280px;
+        }
+
+        &-text {
+            font-weight: 500;
+            line-height: 178%;
+            color: var(--neutral-color150);
+        }
+
+        &:not(:last-child) {
+            @include flex-align-center;
+            gap: 82px;
+            margin-right: 72px;
+
+            @include tablet {
+                margin-right: 0;
+                min-width: 285px;
+            }
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: 99px;
+                background-color: var(--neutral-color40);
+
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+
+
+
+
+        &-num {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 120%;
+            color: var(--neutral-color100);
+
+            @include tablet {
+                font-size: 58px;
+            }
+
+            @include mobile {
+                font-size: 48px;
+            }
+
+            @include small-mobile {
+                font-size: 42px;
+            }
+        }
+    }
+
+    &__list,
+    &__img {
+        margin-bottom: 80px;
+
+
+    }
+
+    &__img {
+        @include tablet {
+            margin-bottom: 50px;
+        }
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__info {
+        @include flex-justify-between;
+        padding-bottom: 160px;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &-title {
+            font-weight: 600;
+            letter-spacing: -0.04em;
+            color: var(--neutral-color100);
+        }
+
+        &-desc {
+            max-width: 461px;
+            font-weight: 500;
+            line-height: 178%;
+            color: var(--neutral-color150);
+
+            @include tablet {
+                max-width: 700px;
+            }
+        }
+    }
+}
