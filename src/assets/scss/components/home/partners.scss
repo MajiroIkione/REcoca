@@ -8,8 +8,6 @@
     &__container{
         @include flex-all-between;
         gap: 30px;
-        padding-bottom: 74px;
-        border-bottom: 1px solid var(--neutral-color30);
 
         @include small-tablet{
             flex-direction: column;
